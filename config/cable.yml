@@ -1,0 +1,13 @@
+default: &default
+
+development:
+  <<: *default
+  channel_prefix: "law_client_manager_development"
+
+test:
+  <<: *default
+  adapter: "test"
+
+production:
+  <<: *default
+  channel_prefix: "law_client_manager_production"
