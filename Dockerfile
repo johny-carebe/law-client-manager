@@ -76,4 +76,4 @@ ENTRYPOINT ["/app/bin/docker-entrypoint-web"]
 
 EXPOSE 3000
 
-CMD ["rails", "s"]
+CMD ["rails", "server", "-b", "0.0.0.0", "--pid=/tmp/server.pid"]

@@ -35,6 +35,9 @@ gem 'jbuilder'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
+gem 'faker'
+gem 'will_paginate'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -48,6 +51,7 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem 'dockerfile-rails', '>= 1.6'
   gem 'rspec-rails'
   gem 'rubocop', require: false
   gem 'solargraph'
@@ -66,5 +70,3 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
-
-gem "dockerfile-rails", ">= 1.6", :group => :development

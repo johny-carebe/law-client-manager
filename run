@@ -78,6 +78,14 @@ function bundle:install {
   _build_run_down web bundle install
 }
 
+function migrate {
+  cmd bundle exec rails db:migrate
+}
+
+function c {
+  cmd bundle exec rails c
+}
+
 function bundle:outdated {
   # List any installed gems that are outdated
   cmd bundle outdated
