@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_18_204150) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_24_131354) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,7 +19,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_18_204150) do
     t.integer "marital_status"
     t.string "ocupation"
     t.string "rg"
-    t.string "cpf"
+    t.string "cpf_cnpj"
     t.string "ctps"
     t.string "pis_init"
     t.string "full_address"

@@ -1,0 +1,46 @@
+<%= form_with model: @person do |f| %>
+  <div class="mb-4">
+    <strong><%= f.label :name %></strong>
+    <%= f.text_field :name, class: "border border-gray-300 px-4 py-2 rounded-md w-full" %>
+  </div>
+  <div class="mb-4">
+    <strong><%= f.label :marital_status %></strong>
+    <%= f.select :marital_status, marital_status_options, {}, class: "border border-gray-300 px-4 py-2 rounded-md w-full" %>
+  </div>
+  <div class="mb-4">
+    <strong><%= f.label :ocupation %></strong>
+    <%= f.text_field :ocupation, class: "border border-gray-300 px-4 py-2 rounded-md w-full" %>
+  </div>
+  <div class="mb-4">
+    <strong><%= f.label :rg %></strong>
+    <%= f.text_field :rg, class: "border border-gray-300 px-4 py-2 rounded-md w-full" %>
+  </div>
+  <div class="mb-4">
+    <strong><%= f.label :cpf_cnpj %></strong>
+    <%= f.text_field :cpf_cnpj, class: "border border-gray-300 px-4 py-2 rounded-md w-full" %>
+  </div>
+  <div class="mb-4">
+    <strong><%= f.label :ctps %></strong>
+    <%= f.text_field :ctps, class: "border border-gray-300 px-4 py-2 rounded-md w-full" %>
+  </div>
+  <div class="mb-4">
+    <strong><%= f.label :pis_init %></strong>
+    <%= f.text_field :pis_init, class: "border border-gray-300 px-4 py-2 rounded-md w-full" %>
+  </div>
+  <div class="mb-4">
+    <strong><%= f.label :full_address %></strong>
+    <%= f.text_field :full_address, class: "border border-gray-300 px-4 py-2 rounded-md w-full" %>
+  </div>
+  <div class="mb-4">
+    <strong><%= f.label :phone %></strong>
+    <%= f.text_field :phone, class: "border border-gray-300 px-4 py-2 rounded-md w-full" %>
+  </div>
+  <div class="mb-4">
+    <strong><%= f.label :email %></strong>
+    <%= f.email_field :email, class: "border border-gray-300 px-4 py-2 rounded-md w-full" %>
+  </div>
+  <div class="flex justify-between">
+    <%= f.submit "Cadastrar", class: "bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md" %>
+    <%= link_to "Voltar", people_path, class: "bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md" %>
+  </div>
+<% end %>

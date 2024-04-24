@@ -1,0 +1,39 @@
+---
+pt-BR:
+  activerecord:
+    attributes:
+      person:
+        cpf_cnpj: 'CPF/CNPJ'
+        ctps: 'CTPS'
+        email: 'E-mail'
+        full_address: 'Endereço Completo'
+        marital_status: 'Estado Civil'
+        marital_statuses:
+          single: "Solteiro(a)"
+          married: "Casado(a)"
+          divorced: "Divorciado(a)"
+          widowed: "Viúvo(a)"
+          civil_union: "União Estável"
+        name: 'Nome'
+        ocupation: 'Ocupação'
+        phone: 'Telefone'
+        pis_init: 'PIS/PASEP'
+        rg: 'RG'
+    models:
+      person:
+        one: 'Pessoa'
+        other: 'Pessoas'
+  helpers:
+    person:
+      links:
+        new: 'Cadastrar nova pessoa'
+  people:
+    create:
+      success: 'Pessoa registrada com sucesso'
+      error: 'Erro ao registrar pessoa: %{errors}'
+    update:
+      success: 'Pessoa atualizada com sucesso'
+      error: 'Erro ao atualizar pessoa: %{errors}'
+    destroy:
+      success: 'Pessoa excluída com sucesso'
+      error: 'Erro ao excluir pessoa: %{errors}'

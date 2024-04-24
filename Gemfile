@@ -35,6 +35,8 @@ gem 'jbuilder'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
+gem 'cpf_cnpj'
+gem 'factory_bot'
 gem 'faker'
 gem 'will_paginate'
 
@@ -52,7 +54,6 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'dockerfile-rails', '>= 1.6'
-  gem 'rspec-rails'
   gem 'rubocop', require: false
   gem 'solargraph'
   gem 'web-console'
@@ -67,6 +68,8 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
+  gem 'rspec-rails'
   gem 'selenium-webdriver'
+  gem 'warden'
   gem 'webdrivers'
 end

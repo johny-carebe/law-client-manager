@@ -1,4 +1,4 @@
-require "test_helper"
+require 'rails_helper'
 
 module ApplicationCable
   class ConnectionTest < ActionCable::Connection::TestCase
@@ -10,4 +10,4 @@ module ApplicationCable
     #   assert_equal connection.user_id, "42"
     # end
   end
- end
+end

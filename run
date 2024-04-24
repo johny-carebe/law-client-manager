@@ -38,18 +38,6 @@ function rails {
   cmd rails "${@}"
 }
 
-function test {
-  # Run your Rails tests, use `test -b` to first rebuild your JS and CSS
-  local run_build="${1:-}"
-  local test_command="rails test"
-
-  if [ "${run_build}" = "-b" ]; then
-    test_command="yarn build && yarn build:css && ${test_command}"
-  fi
-
-  _dc -e "RAILS_ENV=test" js bash -c "${test_command}"
-}
-
 function shell {
   # Start a shell session in the web container
   cmd bash "${@}"
@@ -78,12 +66,25 @@ function bundle:install {
   _build_run_down web bundle install
 }
 
-function migrate {
-  cmd bundle exec rails db:migrate
+function db {
+  cmd bundle exec rails db:"${@}"
 }
 
 function c {
   cmd bundle exec rails c
+}
+
+function console {
+  cmd bundle exec rails console
+}
+
+function routes {
+  cmd bundle exec rails routes
+}
+
+function test {
+  # Run your RSpec tests
+  cmd bundle exec rspec "${@}"
 }
 
 function bundle:outdated {

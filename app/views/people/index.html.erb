@@ -1,0 +1,60 @@
+<div class="container mx-auto py-8">
+  <div class="mb-4">
+    <%= form_tag people_path, method: :get, class: "mb-4" do %>
+      <%= text_field_tag :search,
+          params[:search],
+          placeholder: "Pesquisar por nome ou CPF/CNPJ",
+          class: "border border-gray-300 px-4 py-2 rounded-md w-full lg:w-3/4" %>
+
+      <%= submit_tag "Pesquisar",
+          class: "bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md" %>
+    <% end %>
+  </div>
+  <div class="flex justify-between mb-4">
+    <h2 class="text-2xl font-bold">
+      Lista de Pessoas
+    </h2>
+
+    <%= link_to new_person_path do %>
+      <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">
+        <%= t('helpers.person.links.new') %>
+      </button>
+    <% end %>
+  </div>
+  <ul>
+    <% @people.each do |person| %>
+      <li class="border border-gray-300 rounded-md mb-2 px-4 py-2">
+        <p>
+          <strong><%= t('activerecord.attributes.person.name') %>:</strong> <%= person.name %>
+
+          <%= link_to edit_person_path(person) do %>
+            <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md float-right">
+              <%= t('helpers.links.edit') %>
+            </button>
+          <% end %>
+        </p>
+        <p><strong><%= t('activerecord.attributes.person.marital_status') %>:</strong> <%= marital_status_label(person) %></p>
+        <p><strong><%= t('activerecord.attributes.person.ocupation') %>:</strong> <%= person.ocupation %></p>
+        <p><strong><%= t('activerecord.attributes.person.rg') %>:</strong> <%= formatted_rg(person.rg) %></p>
+        <p><strong><%= t('activerecord.attributes.person.cpf_cnpj') %>:</strong> <%= formatted_document(person.cpf_cnpj) %></p>
+        <p><strong><%= t('activerecord.attributes.person.ctps') %>:</strong> <%= formatted_ctps(person.ctps) %></p>
+        <p><strong><%= t('activerecord.attributes.person.pis_init') %>:</strong> <%= person.pis_init %></p>
+        <p><strong><%= t('activerecord.attributes.person.full_address') %>:</strong> <%= person.full_address %></p>
+        <p>
+          <strong><%= t('activerecord.attributes.person.phone') %>:</strong> <%= person.phone %>
+
+          <%= link_to person_path(person), method: :delete, data: { turbo_method: :delete, turbo_confirm: t('helpers.links.confirm_delete') } do %>
+            <button class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md float-right">
+              <%= t('helpers.links.delete') %>
+            </button>
+          <% end %>
+        </p>
+        <p><strong><%= t('activerecord.attributes.person.email') %>:</strong> <%= person.email %></p>
+      </li>
+    <% end %>
+  </ul>
+  <div class="apple_pagination">
+    <%= will_paginate @people %>
+  </div>
+  </div>
+</div>
