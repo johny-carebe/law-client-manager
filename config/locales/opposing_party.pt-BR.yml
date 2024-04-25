@@ -1,0 +1,27 @@
+---
+pt-BR:
+  activerecord:
+    attributes:
+      opposing_party:
+        client_type: 'Tipo de Parte Contrária'
+        client_types:
+          defendant: 'Réu'
+          plaintiff: 'Autor'
+    models:
+      opposing_party:
+        one: 'Parte Contrária'
+        other: 'Partes Contrárias'
+  helpers:
+    opposing_party:
+      links:
+        new: 'Cadastrar nova parte contrária'
+  opposing_parties:
+    create:
+      success: 'Parte contrária registrada com sucesso'
+      error: 'Erro ao registrar parte contrária: %{errors}'
+    update:
+      success: 'Parte contrária atualizada com sucesso'
+      error: 'Erro ao atualizar parte contrária: %{errors}'
+    destroy:
+      success: 'Parte contrária excluída com sucesso'
+      error: 'Erro ao excluir parte contrária: %{errors}'

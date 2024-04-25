@@ -1,5 +1,4 @@
 FROM ruby:3.3.0-slim-bookworm AS assets
-LABEL maintainer="Nick Janetakis <nick.janetakis@gmail.com>"
 
 WORKDIR /app
 
@@ -43,7 +42,6 @@ CMD ["bash"]
 ###############################################################################
 
 FROM ruby:3.3.0-slim-bookworm AS app
-LABEL maintainer="Nick Janetakis <nick.janetakis@gmail.com>"
 
 WORKDIR /app
 

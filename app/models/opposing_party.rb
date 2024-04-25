@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Client < ApplicationRecord
+class OpposingParty < ApplicationRecord
   belongs_to :person
 
   accepts_nested_attributes_for :person

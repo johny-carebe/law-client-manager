@@ -1,0 +1,14 @@
+<%= form_with model: @opposing_party do |f| %>
+  <div class="field mb-4">
+    <strong><%= f.label :person_id, "Selecione a pessoa" %></strong>
+    <%= f.collection_select :person_id, @people, :id, :name_with_cpf_cnpj, { prompt: "Selecione uma pessoa" }, { class: "border border-gray-300 px-4 py-2 rounded-md w-full" } %>
+  </div>
+  <div class="field mb-4">
+    <strong><%= f.label :client_type, "Selecione o tipo da parte contrária" %></strong>
+    <%= f.select :client_type, client_type_options, {}, class: "border border-gray-300 px-4 py-2 rounded-md w-full" %>
+  </div>
+  <div class="flex justify-between">
+    <%= f.submit "Cadastrar", class: "bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md" %>
+    <%= link_to "Voltar", opposing_parties_path, class: "bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md" %>
+  </div>
+<% end %>

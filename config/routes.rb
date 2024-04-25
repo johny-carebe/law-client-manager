@@ -10,6 +10,10 @@ Rails.application.routes.draw do
     post 'edit_client_type', on: :member
   end
 
+  resources :opposing_parties do
+    post 'edit_client_type', on: :member
+  end
+
   resources :people
 
   # Sidekiq has a web dashboard which you can enable below. It's turned off by
