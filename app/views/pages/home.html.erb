@@ -3,7 +3,15 @@
 </div>
 
 <div class="flex justify-center">
-  <nav class="py-4 px-8 bg-blue-500 rounded-md shadow-md">
-    <%= link_to "Ver Pessoas", people_path, class: "text-white font-semibold hover:underline" %>
-  </nav>
+  <%= link_to people_path do %>
+    <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">
+      Ver Pessoas
+    </button>
+  <% end %>
+  &nbsp;&nbsp;
+  <%= link_to clients_path do %>
+    <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">
+      Ver Clientes
+    </button>
+  <% end %>
 </div>

@@ -150,6 +150,7 @@ pt-BR:
       new: Cadastrar
       delete: Excluir
       confirm_delete: Tem certeza que deseja excluir?
+      change_status: Alterar
     select:
       prompt: Por favor selecione
     submit:

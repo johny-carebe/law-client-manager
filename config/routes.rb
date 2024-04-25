@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   get '/up/', to: 'up#index', as: :up
   get '/up/databases', to: 'up#databases', as: :up_databases
 
+  resources :clients do
+    post 'edit_client_type', on: :member
+  end
+
   resources :people
 
   # Sidekiq has a web dashboard which you can enable below. It's turned off by

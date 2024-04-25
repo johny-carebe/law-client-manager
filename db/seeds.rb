@@ -17,3 +17,11 @@ require 'faker'
     full_address: Faker::Address.full_address
   )
 end
+
+# Create 20 clients
+20.times do
+  Client.create(
+    person: Person.all.sample,
+    client_type: Client.client_types.keys.sample
+  )
+end

@@ -8,7 +8,7 @@ require 'rspec/rails'
 require 'warden'
 
 RSpec.configure do |config|
-  config.fixture_path = Rails.root.join('/spec/fixtures')
+  config.fixture_paths = ["#{Rails.root}/spec/fixtures"]
   config.include FactoryBot::Syntax::Methods
   config.use_transactional_fixtures = true
   config.infer_spec_type_from_file_location!

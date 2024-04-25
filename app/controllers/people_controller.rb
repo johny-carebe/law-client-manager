@@ -81,7 +81,7 @@ class PeopleController < ApplicationController
                                                           .format[:cpf_cnpj]
 
     if cpf_cnpj.blank?
-      @people = @people.where(name: params[:search])
+      @people = @people.where('name ILIKE ?', "%#{params[:search]}%")
       return
     end
 

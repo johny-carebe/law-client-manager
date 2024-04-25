@@ -1,0 +1,27 @@
+---
+pt-BR:
+  activerecord:
+    attributes:
+      client:
+        client_type: 'Tipo de Cliente'
+        client_types:
+          defendant: 'Réu'
+          plaintiff: 'Autor'
+    models:
+      client:
+        one: 'Cliente'
+        other: 'Clientes'
+  helpers:
+    client:
+      links:
+        new: 'Cadastrar novo cliente'
+  clients:
+    create:
+      success: 'Cliente registrado com sucesso'
+      error: 'Erro ao registrar cliente: %{errors}'
+    update:
+      success: 'Cliente atualizado com sucesso'
+      error: 'Erro ao atualizar cliente: %{errors}'
+    destroy:
+      success: 'Cliente excluído com sucesso'
+      error: 'Erro ao excluir cliente: %{errors}'
